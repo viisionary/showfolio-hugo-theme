@@ -1,0 +1,35 @@
+<div>
+  {{ $username := .Site.Params.githubUsername }}
+  <!-- {{ range $index, $val :=.Site.Params.homepage.github.repos }} -->
+  {{ $urlPre := "https://api.github.com" }}
+
+  {{ $partial := getJSON $urlPre "/users/" $username }}
+ 
+<div>
+<img src="{{ $partial.avatar_url }}" width="80" height="80" style="border-radius: 40px;border: 2px solid #d0d7de;" >
+<div>
+  <div>
+    {{$username}}
+  {{$partial.name}}
+    
+  </div>
+  <div class="text-gray-500">
+  {{$username}}
+    
+  </div>
+</div>
+<div>
+{{$partial.bio}}
+  
+</div>
+<div>
+🔗 {{$partial.blog}}
+  
+</div>
+🗺： {{$partial.location}}
+  <div>
+  </div>
+</div>
+
+ <!-- {{end}} -->
+</div>

@@ -1,0 +1,22 @@
+<div style="position: relative;  overflow: hidden;">
+	  {{ $pen := .Params }}
+{{ range $index, $val :=.Params}}
+{{ if eq $index 0 }}
+<div >
+</div>
+  {{ $urlPre := "https://codepen.io" }}
+
+  {{ $partial := getJSON $urlPre "/api/oembed?format=json&url=https://codepen.io/--/pen/" $val}}
+  <h2>
+  </h2>
+  <h4>
+  	<a class="text-gray-500" href="{{$urlPre}}/--/pen/{{$val}} ">{{ $partial.title }}</a>
+    - by <a href="{{ $partial.author_url}}">{{ $partial.author_name}} </a>
+  </h1>
+<iframe id="cp_embed_dPrEvP" class="cp_embed_iframe" style="width: 100%; overflow: hidden;" src="https://codepen.io/--/embed/preview/{{$val}}?height=300&slug-hash={{$val}}&default-tab=result&host=http%3A%2F%2Fcodepen.io" width="300" height="300" frameborder="0" scrolling="no">
+	
+</iframe>
+</div>
+{{end}} 
+  {{end}}
+
