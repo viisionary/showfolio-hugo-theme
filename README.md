@@ -6,6 +6,14 @@
 
 ShowFolio is a modern portfolio theme for your Hugo site.
 
+添加了md文件中对cope的支持
+
+eg: {{< codepen MWmJaPw >}}
+
+& 首页显示github home
+
+github repos
+
 ![Preview](https://github.com/apvarun/showfolio-hugo-theme/raw/main/images/showfolio-dark.png)
 
 **Features:**
