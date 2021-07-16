@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="max-w-5xl mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+
+    {{ range .Pages }}
+    {{ $title := .Params.title }}
+
+    <div class="card-list">
+        <a class="block my-6" href="{{ .RelPermalink }}">
+            {{ $title }} </a>
+
+        <div class="font-light text-gray-800 dark:text-gray-200">
+            {{ .Summary }}
+        </div>
+
+        <p class="font-light mb-2 text-gray-400 text-sm">
+            {{ .Params.date.Format "2006/7/12" }}
+        </p>
+        {{ with .Params.Categories }}
+        <span class="font-light text-gray-400 text-sm dark:text-gray-200">
+                {{ partial "taxonomy/categories.html" . }}
+            </span>
+        {{ end }}
+
+        {{ with .Page.Params.Tags }}
+        <span class="text-gray-400 text-sm dark:text-gray-200">
+                {{ partial "taxonomy/tags.html" . }}
+            </span>
+        {{ end }}
+    </div>
+    {{ end }}
+</article>
+{{ end }}

@@ -27,7 +27,7 @@
     display: -webkit-box;
     overflow: hidden;
     width: 100%;
-    height: 100px;
+    height: 60px;
     margin-bottom: 10px;
 }
 
@@ -49,9 +49,33 @@
     display: flex;
     flex-direction: row;
 }
-.github-page img{
+
+.github-page img {
     margin-right: 20px;
 }
-.github-page-info{
+
+.github-page-info {
     margin-left: 20%;
+}
+
+.content-aside-bar {
+    padding: 2px 0 0 12px;
+    left: 20px;
+}
+
+.category {
+    padding: 4px 6px;
+    border-radius: 3px;
+}
+
+.tag::before {
+    content: '#';
+    opacity: 0.5;
+}
+
+.tag,
+.category {
+    display: inline-block;
+    line-height: 1;
+    margin: 5px 8px 5px 0;
 }
