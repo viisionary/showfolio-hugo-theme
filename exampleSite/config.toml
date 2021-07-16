@@ -11,9 +11,12 @@ title = "Showfolio Theme"
   authorEmail = "name@example.com"
   authorImage = "/photo.png"
   autoDarkMode = true
-
   copyright = "Copyright © 2021 - John Doe · All rights reserved"
   favicon = "favicon.ico"
+
+[[menu.main]]
+name = "External"
+url = "https://example.com"
 
 [params.homepage]
   title = "Hey 👋 I'm John Doe"
