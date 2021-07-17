@@ -1,6 +1,5 @@
 {{ define "main" }}
-<article class="mb-16 max-w-5xl mx-auto px-4 prose lg:prose-lg prose-blue dark:prose-dark post"
-         >
+<article class="mb-16 max-w-5xl mx-auto px-4">
     <h1>{{ .Title }}</h1>
     {{ if .Params.thumbnail }}
     <img class="post-thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image" />
@@ -28,6 +27,8 @@
     <aside class="content-aside-bar">
         {{ .TableOfContents }}
     </aside>
-    {{ .Content }}
+    <div class="prose lg:prose-lg  prose-blue dark:prose-dark">
+        {{ .Content }}
+    </div>
 </article>
 {{ end }}

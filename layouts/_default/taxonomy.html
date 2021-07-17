@@ -1,33 +1,39 @@
 {{ define "main" }}
 <article class="max-w-5xl mx-auto px-4">
+
     <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
 
-    {{ range .Pages }}
-    {{ $title := .Params.title }}
+    <div class="text-gray-600">{{ .Content }}</div>
 
     <div class="card-list">
+        {{ range .Data.Pages -}}
         <a class="block my-6" href="{{ .RelPermalink }}">
-            {{ $title }} </a>
+            {{ $img := .Params.featured_image }}
+            {{ $title := .Params.title }}
+            {{ with $img }}
+            <img class="rounded max-w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
+            {{ end }}
+            <h2 class="text-xl font-semibold mb-1">{{ $title }}</h2>
+            <div class="font-light text-gray-800 dark:text-gray-200">
+                {{ .Summary }}
+            </div>
+            <div class="info dark:info-dark">
+                <span class="font-light mb-2 text-gray-500 text-sm" style="display: inline">
+                {{ .Params.date.Format "January 2, 2006" }}
+                 </span>
+                {{ with .Page.Params.Categories }}
+                <span class="font-light text-gray-800 text-sm dark:text-gray-200"> {{ partial "taxonomy/categories.html" . }} </span>
+                {{ end }}
 
-        <div class="font-light text-gray-800 dark:text-gray-200">
-            {{ .Summary }}
-        </div>
-
-        <p class="font-light mb-2 text-gray-400 text-sm">
-            {{ .Params.date.Format "2006/7/12" }}
-        </p>
-        {{ with .Params.Categories }}
-        <span class="font-light text-gray-400 text-sm dark:text-gray-200">
-                {{ partial "taxonomy/categories.html" . }}
-            </span>
-        {{ end }}
-
-        {{ with .Page.Params.Tags }}
-        <span class="text-gray-400 text-sm dark:text-gray-200">
+                {{ with .Page.Params.Tags }}
+                <span class="font-light text-gray-500 text-sm dark:text-gray-200">
                 {{ partial "taxonomy/tags.html" . }}
-            </span>
-        {{ end }}
+                </span>
+                {{ end }}
+            </div>
+
+        </a>
+        {{ end -}}
     </div>
-    {{ end }}
 </article>
 {{ end }}

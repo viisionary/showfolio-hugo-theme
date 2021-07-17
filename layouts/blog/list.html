@@ -17,22 +17,22 @@
             <div class="font-light text-gray-800 dark:text-gray-200">
                 {{ .Summary }}
             </div>
-            <p class="font-light mb-2 text-gray-500 text-sm">
-                {{ .Params.date.Format "2006/7/12" }}
-            </p>
-            {{ with .Page.Params.Categories }}
-            <span class="font-light text-gray-300 text-sm dark:text-gray-200">
-                {{ partial "taxonomy/categories.html" . }}
+        </a>
+        <div class="info dark:info-dark">
+            <span class="font-light mb-2 text-gray-500 text-sm">
+                {{ .Params.date.Format "January 2, 2006" }}
             </span>
+            {{ with .Page.Params.Categories }}
+            <span class="font-light text-gray-800 text-sm dark:text-gray-200"> {{ partial "taxonomy/categories.html" . }} </span>
             {{ end }}
 
             {{ with .Page.Params.Tags }}
-            <span class="font-light text-gray-300 text-sm dark:text-gray-200">
+            <span class="font-light text-gray-500 text-sm dark:text-gray-200">
                 {{ partial "taxonomy/tags.html" . }}
-            </span>
+                </span>
             {{ end }}
+        </div>
 
-        </a>
         {{ end -}}
     </div>
 </article>

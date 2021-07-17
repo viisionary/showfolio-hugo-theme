@@ -63,9 +63,29 @@
     left: 20px;
 }
 
-.category {
+.info-dark a.category{
+    /*color: #AAA;*/
+}
+.info a.category{
+    display: inline-block;
+    font-weight: 300;
+    font-size: 0.875rem;
+    /*color: #444;*/
+    text-decoration: none;
+}
+
+.info a.tag {
+    font-weight: 300;
+    /*color: #333;*/
+    display: inline-block;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.info .category {
     padding: 4px 6px;
     border-radius: 3px;
+    background-color: rgba(239, 227, 160, 0.5);
 }
 
 .tag::before {
