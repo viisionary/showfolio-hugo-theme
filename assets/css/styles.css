@@ -119,3 +119,26 @@
     border-radius: 5px;
     letter-spacing: 5px
 }
+
+.search {
+    position: relative;
+}
+.search input{
+    border: 1px solid #666;
+    padding: 0 8px;
+    margin: -5px 5px 0;
+
+}
+
+.search_result {
+    position: absolute;
+    background: #4b5563;
+    margin: 5px 0 0 20px;
+    width: 200px;
+}
+
+.search_result li {
+    padding: 3px 8px;
+
+
+}
