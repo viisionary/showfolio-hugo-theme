@@ -59,17 +59,26 @@
 }
 
 .content-aside-bar {
-    padding: 20px 0 20px 12px;
+    padding: 12px 0 20px 12px;
     left: 20px;
     overflow-y: auto;
     max-height: 150px;
     margin-bottom: 20px;
 }
 
-.info-dark a.category{
+.content-aside-bar li ul {
+    margin-left: 12px;
+}
+
+.prose {
+    max-width: 100%;
+}
+
+.info-dark a.category {
     /*color: #AAA;*/
 }
-.info a.category{
+
+.info a.category {
     display: inline-block;
     font-weight: 300;
     font-size: 0.875rem;
@@ -101,4 +110,12 @@
     display: inline-block;
     line-height: 1;
     margin: 5px 8px 5px 0;
+}
+
+.light-highLight {
+    color: #b5b5b5;
+    padding: 3px 10px;
+    background-color: #222323;
+    border-radius: 5px;
+    letter-spacing: 5px
 }
