@@ -42,6 +42,12 @@ Alternatively, you can include this repository as a [git submodule](https://git-
 git submodule add https://github.com/apvarun/showfolio-hugo-theme.git themes/showfolio
 ```
 
+## Setting up the theme
+
+- Install postcss-cli globally using `npm install -g postcss-cli`
+- Copy package.json to the root folder of your website and run `npm install`
+- Finally run `hugo serve`
+
 ## Preview the theme
 
 ShowFolio theme ships with an fully configured example site. For a quick preview:
@@ -52,6 +58,22 @@ hugo serve --themesDir ../..
 ```
 
 Then visit `http://localhost:1313/` in your browser to view the example site.
+
+## Configuring theme to a hugo website
+
+1. Copy `package.json` and `package-lock.json` to the root folder of your the website
+2. Run `npm install` to install required packages for theme
+3. Run `npm i -g postcss-cli` to use PostCSS with Hugo build
+4. Set `theme = 'showfolio'` in config.toml
+5. Run `npm start` to start your local server
+
+Make sure to commit the above changes to your repository.
+
+When deploying to services like Netlify or Vercel, use the following command for building your site:
+
+```sh
+npm i && hugo -D --gc
+```
 
 ## Add content
 
