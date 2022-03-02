@@ -6,8 +6,6 @@
     {{ $partial := getJSON "https://www.npmjs.com/~" $username }}
 
     {{$partial.csrftoken}}
-    <div>
-        <a href="https://www.npmjs.com/package/{{$val}}">{{$val}}</a>
-    </div>
+    <a style="margin-right: 20px" href="https://www.npmjs.com/package/{{$val}}">{{$val}}</a>
     {{end}}
 </section>
