@@ -60,25 +60,33 @@
 
 .content-aside-bar ul li ul li {
     list-style: circle;
+    font-size: 1rem;
+    font-weight: 100;
 }
 
 .content-aside-bar ul ul {
-    padding-inline-start: 10px;
+    padding-inline-start: 4px;
 }
 
 .content-aside-bar {
-    /*padding: 12px 0 20px 12px;*/
-    /*left: 20px;*/
-    /*left: -200px;*/
-    /*float: left;*/
-    overflow-x: auto;
-    width: 8rem;
-    position: fixed;
+    overflow-x: hidden;
+    padding-right: 1rem;
+    width: 10rem;
+    float: left;
+    top: 20px;
+    position: sticky;
     overflow-y: auto;
-    max-height: 80vh;
+    max-height: 90vh;
     border-right: rgb(155, 171, 192) 1px solid;
-    /*border-left: rgb(155, 171, 192) 1px solid;*/
-    /*border-top: rgb(155, 171, 192) 1px solid;*/
+}
+
+.comments {
+    margin-left: 12rem;
+
+}
+
+.content-aside-bar-md {
+    background-color: pink;
 }
 
 .content-aside-bar li ul {
@@ -165,10 +173,51 @@
     margin-right: .2rem;
 }
 
-.prose li input ~ * > li{
+.prose li input ~ * > li {
     list-style: inside;
 }
 
 ul li::before {
     display: none;
+}
+
+.prose p {
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.prose {
+    margin-left: 12rem;
+}
+
+.prose h2 {
+    margin-top: 0.7em !important;
+    margin-bottom: 0.5em !important;
+}
+
+.prose h3 {
+
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .content-aside-bar {
+        width: 100%;
+        float: none;
+        position: static;
+        height: 30vh;
+        border: none;
+    }
+
+    .prose {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
 }
