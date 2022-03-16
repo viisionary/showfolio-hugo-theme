@@ -1,9 +1,9 @@
 {{ define "main" }}
-<article class="mb-16 max-w-5xl mx-auto px-4">
+<article class="mb-16 max-w-5xl mx-auto px-4" style="position: relative">
     <h1 class="text-5xl mb-6">{{ .Title }}</h1>
 
     {{ if .Params.thumbnail }}
-    <img class="post-thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image" />
+    <img class="post-thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image"/>
     {{ end }}
     <ul>
         {{ range .Site.Taxonomies.series.golang }}
@@ -25,15 +25,15 @@
     </div>
     <div class="post-footer">
     </div>
-    <h2 class="text-xl">目录</h2>
-    <aside class="content-aside-bar border-2 mb-4 mt-4">
+    <aside class="content-aside-bar">
+        <h2 class="text-xl">目录</h2>
         {{ .TableOfContents }}
     </aside>
-    <div class="prose lg:prose-lg  prose-blue dark:prose-dark">
+    <div class="prose lg:prose-lg  prose-blue dark:prose-dark ml-40">
         {{ .Content }}
     </div>
 
-    <h1 class="text-xl my-12">留下你的脚印 👣 </h1>
+    <h1 class="text-m my-2">COMMENTS </h1>
 
     {{ partial "Utterances.html" . }}
 
