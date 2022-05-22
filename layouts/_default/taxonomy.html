@@ -19,7 +19,7 @@
             </div>
             <div class="info dark:info-dark">
                 <span class="font-light mb-2 text-gray-500 text-sm" style="display: inline">
-                {{ .Params.date.Format "January 2, 2006" }}
+                OY{{ .Params.date.Format "January 2, 2006" }}
                  </span>
                 {{ with .Page.Params.Categories }}
                 <span class="font-light text-gray-800 text-sm dark:text-gray-200"> {{ partial "taxonomy/categories.html" . }} </span>
