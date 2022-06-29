@@ -18,6 +18,7 @@
   {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
   {{- if .Site.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+
   {{ else }}
   {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
   <link
@@ -26,7 +27,26 @@
     integrity="{{ $styles.Data.Integrity }}"
   />
   {{ end -}}
-  {{ if .Site.Params.autoDarkMode }}
+  <script async>
+    window.onload = (event) => {
+      console.log('执行',document.getElementById('theme'))
+      document.getElementById('theme').addEventListener('click', ()=>{
+        if ( document.documentElement.classList.contains('dark')){
+              document.documentElement.classList.remove("dark");
+              return
+        }
+          document.documentElement.classList.add("dark");
+
+        // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        //   document.documentElement.classList.add("dark");
+        // } else {
+        //   document.documentElement.classList.remove("dark");
+        // }
+      }, false)
+    };
+
+  </script>
+    {{ if .Site.Params.autoDarkMode }}
   <script>
     // On page load or when changing themes
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
