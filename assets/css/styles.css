@@ -82,7 +82,7 @@
 
 .comments {
     margin-left: 12rem;
-
+    margin-top: 24px;
 }
 
 .content-aside-bar-md {
@@ -117,11 +117,12 @@
     text-decoration: none;
 }
 
-.info .category {
-    padding: 4px 6px;
+.category {
+    padding: 4px 12px;
     border-radius: 3px;
     background-color: rgba(239, 227, 160, 0.5);
 }
+
 
 .tag::before {
     content: '#';
@@ -134,6 +135,8 @@
     line-height: 1;
     margin: 5px 8px 5px 0;
 }
+
+
 
 .light-highLight {
     color: #b5b5b5;

@@ -1,11 +1,9 @@
 <section class="max-w-5xl mx-auto">
-    <div class="text-3xl font-bold mb-8">NPM PACKAGES</div>
+    <div class="text-3xl font-bold mb-8" style="border-width: 8px 0 0 ;border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3">NPM PACKAGES</div>
 
     {{ $username := .Site.Params.npm }}
-    {{ range $index, $val :=.Site.Params.homepage.npm.packages }}
-    {{ $partial := getJSON "https://www.npmjs.com/~" $username }}
 
-    {{$partial.csrftoken}}
-    <a style="margin-right: 20px" href="https://www.npmjs.com/package/{{$val}}">{{$val}}</a>
+    {{ range $index, $val :=.Site.Params.homepage.npm.packages }}
+    <a style="margin-right: 20px;" href="https://www.npmjs.com/package/{{$val}}">{{$val}}</a>
     {{end}}
 </section>

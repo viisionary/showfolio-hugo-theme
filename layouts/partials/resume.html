@@ -37,12 +37,24 @@
     </div>
     <div>
         <div class="text-2xl font-semibold mb-4">Blog
+            Categories
+        </div>
+        <div>
+            {{ range .Site.Taxonomies.categories }}
+            <a class="category" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+<!--            <i style="margin-right: 10px">[{{ .Count }}]</i>-->
+            {{ end }}
+            </span>
+        </div>
+    </div>
+    <div>
+        <div class="text-2xl font-semibold mb-4">Blog
             Tags
         </div>
         <div>
             {{ range .Site.Taxonomies.tags }}
             <a class="tag" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-            <i style="margin-right: 10px">{{ .Count }}</i>
+            <i style="margin-right: 10px">[{{ .Count }}]</i>
             {{ end }}
             </span>
         </div>

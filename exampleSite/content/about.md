@@ -12,9 +12,13 @@ Written in Go, Hugo is an open source static site generator available under the 
 Hugo makes use of a variety of open source projects including:
 
 - https://github.com/yuin/goldmark
+
 - https://github.com/alecthomas/chroma
+- 
 - https://github.com/muesli/smartcrop
+- 
 - https://github.com/spf13/cobra
+- 
 - https://github.com/spf13/viper
 
 Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
@@ -24,3 +28,8 @@ Hugo is for people who want to hand code their own website without worrying abou
 Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
 
 Learn more and contribute on [GitHub](https://github.com/gohugoio).
+
+
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=viisionary&theme=prussian&border_radius=3&locale=zh&background=FFFFFF)](https://git.io/streak-stats)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=viisionary&layout=compact)](https://github.com/viisionary/github-readme-stats)
