@@ -57,7 +57,4 @@ url = "https://example.com"
 [build]
   writeStats = true
 
-# syntax highlight settings
-[markup]
-  [markup.highlight]
-    style = "dracula"
+

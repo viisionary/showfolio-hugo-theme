@@ -221,3 +221,39 @@ html {
         margin-top: 2rem;
     }
 }
+
+/*@media (prefers-color-scheme: dark)  {*/
+/*    kbd{*/
+/*        --kbd-color-background: #898b90;*/
+/*        --kbd-color-border: #3d3e42;*/
+/*        --kbd-color-text:       #222325;*/
+/*    }*/
+
+
+/*}*/
+kbd {
+    --kbd-color-background: #f7f7f7;
+    --kbd-color-border: #cbcccd;
+    --kbd-color-text: #222325;
+    background-color: var(--kbd-color-background);
+    color: var(--kbd-color-text);
+    width: max-content;
+    border-radius: 0.25rem;
+    display: inline-block;
+    border: 1px solid var(--kbd-color-border);
+    box-shadow: 0 2px 0 1px var(--kbd-color-border);
+    cursor: default;
+    font-size: 0.75em;
+    line-height: 1;
+    min-width: 0.75rem;
+    text-align: center;
+    padding: 2px 5px;
+    position: relative;
+    top: -1px;
+}
+
+
+kbd:hover {
+    box-shadow: 0 1px 0 1px var(--kbd-color-border);
+    top: 1px;
+}
