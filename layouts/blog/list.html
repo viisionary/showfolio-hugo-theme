@@ -7,29 +7,33 @@
 
     <div class="card-list">
         {{ range .Data.Pages -}}
-        <a class="block my-6" href="{{ .RelPermalink }}">
-            {{ $img := .Params.featured_image }}
-            {{ $title := .Params.title }}
-            {{ with $img }}
-            <img class="rounded max-w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
-            {{ end }}
-            <h2 class="text-xl font-semibold mb-1">{{ $title }}</h2>
-            <div class="font-light text-gray-800 dark:text-gray-200">
-                {{ .Summary }}
-            </div>
-        </a>
-        <div class="info dark:info-dark">
+        <div class="card">
+
+            <a class="block my-6" href="{{ .RelPermalink }}">
+                {{ $img := .Params.featured_image }}
+                {{ $title := .Params.title }}
+                {{ with $img }}
+                <img class="rounded max-w-full mb-4" src="{{ . }}" alt="{{ $title }}"/>
+                {{ end }}
+                <h2 class="text-xl font-semibold mb-1">{{ $title }}</h2>
+                <div class="font-light text-gray-800 dark:text-gray-200">
+                    {{ .Summary }}
+                </div>
+            </a>
+            <div class="info dark:info-dark">
             <span class="font-light mb-2 text-gray-500 text-sm">
                 {{ .Params.date.Format "January 2, 2006" }}
             </span>
-            {{ with .Page.Params.Categories }}
-            <span class="font-light text-gray-800 text-sm dark:text-gray-200"> {{ partial "taxonomy/categories.html" . }} </span>
-            {{ end }}
+                {{ with .Page.Params.Categories }}
+                <span class="font-light text-gray-800 text-sm dark:text-gray-200"> {{ partial "taxonomy/categories.html" . }} </span>
+                {{ end }}
 
-            {{ with .Page.Params.Tags }}
-            <span class="font-light text-gray-500 text-sm dark:text-gray-200">
+                {{ with .Page.Params.Tags }}
+                <span class="font-light text-gray-500 text-sm dark:text-gray-200">
                 {{ partial "taxonomy/tags.html" . }}
                 </span>
+            </div>
+
             {{ end }}
         </div>
 

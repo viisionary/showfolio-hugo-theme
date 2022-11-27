@@ -4,6 +4,8 @@ title: Math Typesetting
 date: 2021-04-24
 description: A brief guide to setup KaTeX
 math: true
+tags: ["markdown", "css", "html"]
+categories : ["md"]
 ---
 
 Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
